@@ -240,34 +240,3 @@ section h2 {
     transform: rotate(-45deg) translate(6px, -6px);
   }
 }
-@media (max-width: 768px) {
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    z-index: 1000;
-    background: #021a13;
-  }
-  .navbar {
-    padding: 0.5rem 1rem;
-  }
-  .nav-links {
-    position: absolute;
-    top: 60px; /* match header height! */
-    left: 0;
-    width: 100vw;
-    background: #021a13;
-    display: none;
-    flex-direction: column;
-    z-index: 999;
-  }
-  .nav-toggle:checked ~ .nav-links {
-    display: flex;
-  }
-  /* Make sure your first section isn't covered */
-  #home,
-  .hero {
-    padding-top: 80px; /* adjust this if header is taller */
-  }
-}
