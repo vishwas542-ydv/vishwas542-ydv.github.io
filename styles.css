@@ -209,6 +209,6 @@ section h2 {
   /* Make sure your first section isn't covered */
   #home,
   .hero {
-    padding-top: 170px; /* adjust this if header is taller */
+    padding-top: 1200px; /* adjust this if header is taller */
   }
 }
