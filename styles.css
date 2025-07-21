@@ -74,8 +74,8 @@ section h2 {
   border-radius: 16px;
   box-shadow: 0 4px 32px 0 rgba(0,255,136,0.13);
   padding: 2rem 1.5rem;
-  align-items: center;
-  
+ 
+  align-content: center;
   /*text-align: left;*/
   transition: transform 0.3s cubic-bezier(.17,.67,.83,.67), box-shadow 0.3s, background 0.3s;
   cursor: pointer;
