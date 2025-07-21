@@ -107,19 +107,13 @@ section h2 {
 }
 .card-img-top {
   width: 100%;
-  height: 180px;                  /* Fixed height for uniformity */
-  object-fit: cover;              /* Crop image to fill area */
-  border-radius: 12px 12px 0 0;   /* Rounded top corners to match card */
-  box-shadow: 0 2px 16px rgba(0,255,136,0.09); /* Soft shadow for separation */
-  background: #101c16;            /* fallback background */
+  height: 180px;            /* Fixed height for uniformity */
+  object-fit: cover;        /* Ensures image fills the area and is cropped appropriately */
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
   display: block;
-  margin: -2rem -1.5rem 1rem -1.5rem; /* Align with card padding for flush effect */
-  transition: box-shadow 0.3s;
-}
-
-/* Optional: Enhance image on card hover */
-.card:hover .card-img-top {
-  box-shadow: 0 8px 32px 0 rgba(0,255,136,0.22);
+  margin-bottom: 1rem;
+  background: #101c16;      /* fallback background */
 }
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(40px);}
