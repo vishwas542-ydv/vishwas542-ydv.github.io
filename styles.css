@@ -149,68 +149,29 @@ section h2 {
 /* Responsive */
 /* --- MOBILE RESPONSIVE FIX --- */
 @media (max-width: 768px) {
-  body {
-    font-size: 1rem;
-  }
-  header, nav {
-    padding: 0.5rem 1rem;
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.7rem 1rem;
   }
   .nav-links {
     flex-direction: column;
-    gap: 0.8rem;
-    padding: 0;
-    align-items: flex-start;
-  }
-  section {
-    max-width: 100vw;
-    padding: 1rem 0.3rem;
-    border-radius: 0;
-  }
-  .card-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    max-width: 100vw;
-    padding: 0;
-  }
-  .card {
+    gap: 0.7rem;
     width: 100%;
-    max-width: 98vw;
-    padding: 1rem 0.3rem;
-    margin: 0 auto 1.5rem auto;
-    font-size: 1rem;
-    border-radius: 12px;
-    box-sizing: border-box;
-  }
-  .card-img-top {
-    width: 100%;
-    height: 120px; /* smaller for mobile */
-    margin: 0 0 1rem 0;
-    border-radius: 14px 14px 10px 10px;
-  }
-  .card ul, .card p {
-    font-size: 1rem;
-  }
-  .project-cards, .edu-card, .exp-card, .achieve-card, .contact-content {
-    padding: 0.5rem 0.2rem;
+    padding: 0;
     margin: 0;
-    font-size: 1rem;
   }
-  h1, h2, h3 {
-    font-size: 1.3em;
-  }
-  .hero-content {
-    padding: 0.5rem;
-  }
-  /* Buttons and links */
-  .btn, .contact-button {
+  .nav-links li {
     width: 100%;
-    font-size: 1rem;
-    padding: 0.7em 0.5em;
-    margin-bottom: 0.7em;
   }
-  /* Social icons */
-  .social-links a {
-    font-size: 1.4em;
-    margin-right: 0.6em;
+  .nav-links a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.7rem 0.6rem;
+    font-size: 1.1rem;
+  }
+  .nav-brand {
+    margin-bottom: 0.8rem;
   }
 }
