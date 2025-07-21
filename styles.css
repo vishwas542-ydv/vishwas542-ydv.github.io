@@ -255,6 +255,6 @@ section h2 {
 }
 @media (max-width: 768px) {
   section:first-of-type, #home {
-    padding-top: 80px; /* or whatever is enough to clear header/menu */
+    padding-top: 120px; /* or whatever is enough to clear header/menu */
   }
 }
