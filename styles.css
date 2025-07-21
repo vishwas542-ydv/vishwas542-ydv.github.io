@@ -182,61 +182,33 @@ section h2 {
 
 /* Responsive Nav */
 @media (max-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    background: #021a13;
+  }
   .navbar {
-    justify-content: space-between;
     padding: 0.5rem 1rem;
   }
-  .nav-brand {
-    font-size: 2rem;
-    margin-bottom: 0;
-    z-index: 101;
-  }
-  .nav-toggle-label {
-    display: flex;
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  /* Hide nav links by default */
   .nav-links {
     position: absolute;
-    top: 65px; /* adjust if your nav is taller */
+    top: 60px; /* match header height! */
     left: 0;
     width: 100vw;
     background: #021a13;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1.5rem 0 1.5rem 0;
-    margin: 0;
-    box-shadow: 0 8px 32px 0 rgba(0,255,136,0.09);
     display: none;
-    z-index: 99;
+    flex-direction: column;
+    z-index: 999;
   }
-  .nav-links li {
-    width: 100%;
-    text-align: center;
-  }
-  .nav-links a {
-    display: block;
-    width: 100%;
-    padding: 1rem 0;
-    font-size: 1.3rem;
-    color: #00ff88;
-    border-radius: 0;
-  }
-  /* Show nav links when hamburger checked */
   .nav-toggle:checked ~ .nav-links {
     display: flex;
   }
-  /* Hamburger to X animation */
-  .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-  }
-  .nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
-    opacity: 0;
-  }
-  .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+  /* Make sure your first section isn't covered */
+  #home,
+  .hero {
+    padding-top: 80px; /* adjust this if header is taller */
   }
 }
