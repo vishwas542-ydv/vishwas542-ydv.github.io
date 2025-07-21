@@ -68,20 +68,13 @@ section h2 {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2.2rem;
 }
-/* .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2.2rem;
-  max-width: 400px;      /* or 900px, adjust as needed */
-  margin: 0 auto;         /* centers the grid */
-  padding: 2rem 1rem;     /* optional for spacing */
-} */
+
 .card {
   background: rgba(1,26,19,0.8);
   border-radius: 16px;
   box-shadow: 0 4px 32px 0 rgba(0,255,136,0.13);
   padding: 2rem 1.5rem;
-  text-align: center;
+  text-align: left;
   transition: transform 0.3s cubic-bezier(.17,.67,.83,.67), box-shadow 0.3s, background 0.3s;
   cursor: pointer;
   opacity: 0;
@@ -115,7 +108,7 @@ section h2 {
 .card-img-top {
   width: 100%;
   height: 100px;                  /* Fixed height for uniformity */
-  object-fit: contain;              /* Crop image to fill area */
+  object-fit: cover;              /* Crop image to fill area */
   border-radius: 12px 12px 0 0;   /* Rounded top corners to match card */
   box-shadow: 0 2px 16px rgba(0,255,136,0.09); /* Soft shadow for separation */
   background: #101c16;            /* fallback background */
