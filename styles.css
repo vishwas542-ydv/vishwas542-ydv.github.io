@@ -68,6 +68,15 @@ section h2 {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2.2rem;
 }
+.card-img-top {
+  width: 100%;              /* Make the image fill the card's width */
+  height: auto;             /* Maintain aspect ratio */
+  border-top-left-radius: 0.5rem;  /* Rounded corners if card has them */
+  border-top-right-radius: 0.5rem;
+  object-fit: cover;        /* Ensure image fills area nicely without distortion */
+  display: block;           /* Removes extra space below image */
+}
+
 .card {
   background: rgba(1,26,19,0.8);
   border-radius: 16px;
