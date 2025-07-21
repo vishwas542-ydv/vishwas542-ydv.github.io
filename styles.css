@@ -10,7 +10,7 @@ header {
   background: #021a13;
   box-shadow: 0 2px 14px rgba(0,255,136,0.08);
 }
-
+/* 
 nav {
   display: flex;
   justify-content: space-between;
@@ -42,7 +42,7 @@ nav {
 .nav-links a:hover, .nav-links a.active {
   background: #00ff881a;
   color: #00ff88;
-}
+} */
 
 section {
   margin: 3rem auto;
@@ -145,33 +145,84 @@ section h2 {
   background: linear-gradient(90deg, #021a13 0%, #00ff88 100%);
   transform: scale(1.08);
 }
+/* Hamburger Styles */
+.nav-toggle {
+  display: none;
+}
+.nav-toggle-label {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.nav-toggle-label span {
+  display: block;
+  height: 4px;
+  width: 28px;
+  margin: 4px 0;
+  background: #00ff88;
+  border-radius: 2px;
+  transition: 0.3s;
+}
 
-/* Responsive */
-/* --- MOBILE RESPONSIVE FIX --- */
+/* Responsive Nav */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.7rem 1rem;
-  }
   .nav-links {
+    position: absolute;
+    top: 65px; /* adjust if your nav is taller */
+    left: 0;
+    width: 100vw;
+    background: #021a13;
     flex-direction: column;
-    gap: 0.7rem;
-    width: 100%;
-    padding: 0;
+    gap: 1rem;
+    padding: 1.5rem 0 1.5rem 0;
     margin: 0;
+    box-shadow: 0 8px 32px 0 rgba(0,255,136,0.09);
+    display: none;
+    z-index: 99;
   }
   .nav-links li {
     width: 100%;
+    text-align: center;
   }
   .nav-links a {
     display: block;
     width: 100%;
-    text-align: left;
-    padding: 0.7rem 0.6rem;
-    font-size: 1.1rem;
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    color: #00ff88;
+    border-radius: 0;
+  }
+  .nav-toggle-label {
+    display: flex;
   }
   .nav-brand {
-    margin-bottom: 0.8rem;
+    font-size: 2rem;
+    margin-bottom: 0;
+    z-index: 101;
+  }
+  nav {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+  /* Show menu when checked */
+  .nav-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+  /* Hamburger to X animation */
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
   }
 }
