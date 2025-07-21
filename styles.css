@@ -240,3 +240,21 @@ section h2 {
     transform: rotate(-45deg) translate(6px, -6px);
   }
 }
+@media (max-width: 768px) {
+  header, .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    background: #021a13;
+  }
+  .nav-links {
+    top: 60px; /* matches header height */
+  }
+}
+@media (max-width: 768px) {
+  section:first-of-type, #home {
+    padding-top: 80px; /* or whatever is enough to clear header/menu */
+  }
+}
