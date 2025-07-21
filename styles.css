@@ -63,12 +63,19 @@ section h2 {
 }
 
 /* Interactive Cards */
+/* .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.2rem;
+} */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2.2rem;
+  max-width: 1200px;      /* or 900px, adjust as needed */
+  margin: 0 auto;         /* centers the grid */
+  padding: 2rem 1rem;     /* optional for spacing */
 }
-
 .card {
   background: rgba(1,26,19,0.8);
   border-radius: 16px;
