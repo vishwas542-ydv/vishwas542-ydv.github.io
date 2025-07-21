@@ -10,7 +10,7 @@ header {
   background: #021a13;
   box-shadow: 0 2px 14px rgba(0,255,136,0.08);
 }
-/* 
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -42,7 +42,7 @@ nav {
 .nav-links a:hover, .nav-links a.active {
   background: #00ff881a;
   color: #00ff88;
-} */
+}
 
 section {
   margin: 3rem auto;
@@ -169,8 +169,36 @@ section h2 {
   transition: 0.3s;
 }
 
+/* Desktop nav layout */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+.nav-brand {
+  margin-right: 2rem;
+}
+
 /* Responsive Nav */
 @media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+  .nav-brand {
+    font-size: 2rem;
+    margin-bottom: 0;
+    z-index: 101;
+  }
+  .nav-toggle-label {
+    display: flex;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  /* Hide nav links by default */
   .nav-links {
     position: absolute;
     top: 65px; /* adjust if your nav is taller */
@@ -197,21 +225,7 @@ section h2 {
     color: #00ff88;
     border-radius: 0;
   }
-  .nav-toggle-label {
-    display: flex;
-  }
-  .nav-brand {
-    font-size: 2rem;
-    margin-bottom: 0;
-    z-index: 101;
-  }
-  nav {
-    position: relative;
-    flex-direction: row;
-    align-items: center;
-    padding: 0.5rem 1rem;
-  }
-  /* Show menu when checked */
+  /* Show nav links when hamburger checked */
   .nav-toggle:checked ~ .nav-links {
     display: flex;
   }
