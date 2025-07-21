@@ -239,7 +239,8 @@ section h2 {
   .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
   }
-  
+}
+@media (max-width: 768px) {
   header {
     position: fixed;
     top: 0;
