@@ -207,8 +207,7 @@ section h2 {
     display: flex;
   }
   /* Make sure your first section isn't covered */
-  #home,
-  .hero {
-    padding-top: 1200px; /* adjust this if header is taller */
+  #home {
+    padding-top: 20000px; /* adjust this if header is taller */
   }
 }
